@@ -109,7 +109,8 @@ class MixtureLayer(object):
                 tf.nn.sigmoid(e),
                 tf.nn.softmax(pi * (1. + bias)),
                 mu1, mu2,
-                tf.exp(std1 - bias), tf.exp(std2 - bias),
+                tf.exp(std1 - bias), 
+                tf.exp(std2 - bias),
                 tf.nn.tanh(rho)
             )
 
