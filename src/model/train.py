@@ -70,7 +70,7 @@ def train():
         )
 
         for e in range(epoch, num_epoch):
-            print('\nEpoch {}'.format(e))
+            print(f'\nEpoch {e}')
             for b in range(1, batches_per_epoch + 1):
                 coords, seq, reset, needed = batch_generator.next_batch()
                 if needed:
